@@ -25,6 +25,7 @@ Challenges:
     Near the client: 
         Reduces traffic to distant servers, and reduces the response time due to physical proximity.
     At or near the server: 
+	Reduces
         
 
 
