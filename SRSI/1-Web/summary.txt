@@ -1,0 +1,101 @@
+Possible structure of applications:  
+- Client-server:
+    Always-on host, with the same IP. Data centers for scaling;
+    Clients have changing IPs, communicate with server.
+- Peer-to-peer:
+    No always-on server, is self-scalable (more peers bring more service capacity, as well as new service demands).
+    Complex management.
+
+Process communicating: 
+- A process is a program running on a host.
+
+Sockets:
+- Doors for messages (used for sending and receiving)
+
+Processes have identifiers, different from the host machine that is running it. 
+Identifier includes the IP address and port numbers associated with processo on host.
+
+Application layer protocol defines 4 things (TMMR):
+- Types of messages exchanged;
+- Message Syntax;
+- Message Semantics;
+- Rules for how and when processes send and respond to messages.
+
+Common requirements for apps (4):
+- Data Integrity;
+- Timing;
+- Throughput;
+- Security;
+
+TCP vs UDP:
+- TCP:
+    Reliable;
+    Flow control (sender won't overwhelm receiver);
+    Congestion control (throttling on network overload);
+    No timing, minimum throughput nor security;
+    Connection-oriented.
+- UDP:
+    Unreliable;
+    No flow control, congestion, timing, minimum throughput, security, nor connection setup
+
+WWW Architectural Components (6):
+- Client (browser)
+- URL
+- Server
+- HTTP Protocol
+- HTML
+- Proxies
+
+HTTP Protocol:
+- Client-server;
+- Request-response;
+- Evoked by browser on client, reponded by server process on server;
+- TCP;
+- Stateless;
+- Text-based;
+- Supports caching;
+
+HTTP Requests:
+- GET, POST, PUT, DELETE, OPTIONS, HEAD, TRACE, CONNECT
+
+Cookies: 
+- Since HTTP is stateless, cookies are used to maintain state.
+- Can be used for:
+    Authorization;
+    Shopping Carts;
+    Recommendations;
+    User session State;
+
+HTTP Performance depends on:
+- Network performance: bandwidth, latency;
+- Server performance;
+- Contents;
+- Processing and rendering time (local machine).
+
+HTTP connections: 
+- Non-persistent HTTP (HTTP 1.0):
+    Can download at the most one object, then needs to reconnect;
+    2 RTTs per object;
+- Persistent HTTP (HTTP 1.1):
+    Multiple objects can be sent over single TCP connection;
+    One RTT for all the objects;
+
+HTTP 2.0 (5 key components):
+- Binary;
+- Full multiplexing of requests and responses (several communications can be sent through the same physical medium);
+- Parallelism on single TCP connection;
+- Server Push;
+- Header Compression;
+
+Architectural components of the web:
+- Web pages are hypermedia documents;
+- Web servers store pages;
+- Browsers access and present pages;
+- Pages represented using HTML;
+- Each page has a unique name (URL);
+
+Condtional Requests:
+- The client asks for something conditionally, and the server will only send it if the condition is met;
+
+
+
