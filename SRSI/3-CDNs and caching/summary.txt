@@ -1,0 +1,35 @@
+CDN -> Content Delivery Network
+
+Caching is storing the contents with high number of hits in locations where they can be more efficiently downloaded. This way they can be better accessed.
+
+Cache hit -> retrieve local copy of page;
+Cache miss -> retrieve page from server;
+
+Advantages:
+- Less requests
+- Less full responses
+- Improved performance due to better response times
+- Higher availability due to lower server and network load 
+
+
+Disadvantages:
+- Possibly stale data 
+
+Challenges:
+- How to cache? Pre-fetch and on-demand
+- How long to cache? Based on expiration timestamp
+- Requires fast search methods, and large amounts of space
+- Where to cache? Three alternatives: 
+    At the client:
+        If a page is accessed frequently, it should be cached in the client, to avoid retrieving the page.
+    Near the client: 
+        Reduces traffic to distant servers, and reduces the response time due to physical proximity.
+    At or near the server: 
+        Reduce load on main server, and same cache can serve many clients.
+
+Types of WWW Explicit Caching:
+- Local Caching:
+    Reduces network access, and is very fast, vruuuum
+- Network Caching:
+    Uses Proxies that replace servers in the retrieval of the page;
+
