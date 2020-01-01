@@ -1,0 +1,51 @@
+Acceptance testing.
+
+There are a lot of bugs, basically. They are expensive.
+
+Why quality pays:
+- Buggy code can be life threatening;
+- Quality work saves time and money;
+- Quality work is more predicable (to test and repair for example).
+
+Costs of conformance are associated with planning and running tests.
+Costs of non-conformance are due to internal failures (before release) or external failures (after release). The longer a bug remains in the code, the higher the cost to fix.
+
+Costs of conformance + non conformance due to internal failures < non conformance due to external failures;
+
+Static Testing: Testing without executing anything (requirements, design, code...) 
+Dynamic Testing: Testing that requires the execution of the software of a component or system.
+
+Testing can be used to show the presence of bugs, but not their absence.
+
+Goals: 
+- Find failures;
+- Increase confidence in the correctness of the software.
+
+Test Types:
+- Level (ASIU): 
+    Acceptance
+    System 
+    Integration
+    Unit
+- Quality attributes 6 (FRRUSP):
+    Functionality
+    Reliability
+    Robustness
+    Usability
+    Security
+    Performance
+- Test case design strategy:
+    White box
+    Black box
+    
+V-Model -> Testing levels are parallel to a development phase
+
+Specify Requirements -> System Tests
+(Requirements Review go along with system and acceptance test plan and review)
+Design -> Integration tests
+Code -> Unit Tests    
+
+Unit Testing: 
+- Testing of individual units;
+- 
+
