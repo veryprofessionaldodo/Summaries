@@ -40,4 +40,12 @@ DNS Caching to improve lookup speeds:
 Split DNS: 
 - Internal DNS for the organization, external for outside communications;
 - Has a Firewall that connects to the outside Internet;
-- 
+
+BIND supports views, which is a set of domains visible to only some DNS Clients. It basically hides certain parts of the Internet from the network and vice versa.
+
+It solves the problems of having a DNS server for the internal network of a company, and another for the external servers / clients.
+
+Config files for BIND: named.conf, resolv.conf, named.conf.options, zone files.
+
+
+
