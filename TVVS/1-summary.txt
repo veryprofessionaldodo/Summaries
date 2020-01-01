@@ -47,5 +47,62 @@ Code -> Unit Tests
 
 Unit Testing: 
 - Testing of individual units;
-- 
+- Usually API testing;
+- responsibility of the developer;
+GOAL: Find functional and structural defects in the unit.
 
+Integration Testing:
+- Tests between the interaction of systems or components;
+- responsibility of a small team;
+GOAL: Find defects in the interfaces and interactions between components or systems.
+
+System Testing:
+- Testing on a complete integrated system to check whether or not the requirements are met;
+- Usually GUI testing;
+- responsibility of an independent test team;
+- Based on requirements document;
+GOAL: Ensure the system performs according requirements, by evaluating functional behaviour as well as quality requirements.
+
+Acceptance Testing:
+- Testing to determine whether the system satisfies the client's demands;
+- Responsibility of the customer;
+GOAL: Make sure the customer's requirements are met.
+
+Test Case: Set of input values and preconditions, with expected results;
+Test Condition: Event that could be verified by one or more test cases;
+
+A good test case:
+- Can find defects;
+- Exercise multiple aspects of the system under test;
+- Low cost;
+- Easy to maintain.
+
+Test Adequacy: 
+- Criteria to decide whether test suite is good enough (confidence that "most" defects are found). These include:
+    Requirements / specification coverage;
+    Code coverage;
+    Model coverage (state transition and whatnot);
+    Fault coverage;
+
+Testing best practices:
+- Test early;
+- Automate;
+- TDD;
+- The more critical the system the more independent should be the tester;
+- Keep cost in mind;
+- Use test cases to objectively measure progress;
+- Combine tests with reviews;
+- Design the tests based on the specification first, and later the code;
+
+Types of Acceptance testing:
+- User acceptance testing;
+- Alpha and Beta testing (alpha -> in house testing, beta -> external site testing);
+- Site acceptance testing (testing done at the end-site);
+- Operational acceptance testing (done in a simulated operational environment);
+- Production acceptance testing;
+
+Behaviour Driven Development: 
+- Similar to TDD (test first, write later), but tests are run in plain English, and with examples;
+- Collab between Business Stakeholders, Business Analysts, QA Team and developers;
+- Uses natural language that non-technical stakeholders can understand;
+- Tests are similar to User stories.

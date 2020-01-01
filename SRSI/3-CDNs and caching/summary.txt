@@ -75,3 +75,8 @@ The architecture contains the backend servers (the OG servers), geographically d
 
 Conflicting goals, and a CDN wants to improve RTT while simultaneously balancing load. If a server is close, it can be overwhelmed, and the load is not evenly distributed among servers. The solution is to resolve which server to use by proximity first, and later by load balancing.
 
+Uses DNS for the redirection.
+
+Load balancing is done by sorting the server list by load, and use the first server below a certain load threshold;
+
+Overlay enables optimization, as different services can have different solutions.
