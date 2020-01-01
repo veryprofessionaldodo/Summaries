@@ -32,3 +32,12 @@ DNS Resolution:
 - Bootstrap, local name server is configurable and root servers are known out-of-band (outside the zone);
 - Caching;
 - Uses UDP;
+
+DNS Caching to improve lookup speeds:
+- Caches non local names;
+- Names may change, so cache needs to be updated (period set by the authoritative server);
+
+Split DNS: 
+- Internal DNS for the organization, external for outside communications;
+- Has a Firewall that connects to the outside Internet;
+- 
