@@ -56,5 +56,29 @@ Improve Gnutella search:
 - Replicate content to increase efficiency of queries and delivery (problems with data consistency and synchronisation);
 - Indices at nodes store location of nearby contents;
 
+Gnutella Query Routing Protocol:
+- Introduces hierarchy, using leaf nodes and ultrapeers;
+- Leafs connect to ultrapeers, ultrapeers connect to each other;
+- Leaf nodes do announcements to ultrapeers, and this way it doesn't flood the network;
 
+Bittorrent:
+- Files are split into chunks, as soon as a chunk is downloaded, the peer becomes a seeder for that chunk. This increases chunk availability;
+- Trackers are supernodes that track which peers have which information;
 
+Bittorrent Tracker Protocol:
+- Communication with trackers is done over HTTP;
+- Trackers respond with IP and port of peers that have chunk;
+- Peers inform trackers when they start, stop and finish downloading a file;
+
+Bittorrent Peer Protocol:
+- Done by TCP;
+- Protocol is symmetric (same messages and can flow both ways);
+- Interested/not interested, choked/unchoked;
+- Random download of chunks;
+
+Fairness:
+- Download rate must be the same as upload rate;
+
+Incentives:
+- Peers reciprocate upload to peers downloading to them; (Tit-for-tat)
+- Optimistic unchoke (non-utilized connections are unchoked on a trial basis, see if things work out better that way in terms of transfer rates);
