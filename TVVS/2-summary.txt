@@ -1,0 +1,70 @@
+Unit testing:
+
+Simple tests that test functionality of a particular unit or module in the code, done by the devs;
+
+Advantages:
+- Facilitates changes (refactors);
+- Simplifies integration (eliminates uncertainty in the units that will work on the integration);
+- Documentation (unit tests provide a basic idea of how a system will work);
+
+Good Unit Tests:
+- Automated;
+- Easy to implement;
+- Runs at the push of the button;
+- Fast to run;
+- Anyone can run it (no dependencies problems and things like that);
+- Limited scope (should test one thing, I don't know why, it doesn't even matter how hard I try);
+- Often uses stubs;
+- Name tests properly;
+- Independent;
+- Test trivial cases too;
+- Cover boundary cases;
+- Test things that should not work (to assure robustness in error handling);
+
+Unit tests should not test outside of it's scope of class. If interaction with database is necessary, use mock objects and abstract an interface around the connection.
+
+Mock objects simulate real objects, but are more controllable.
+
+Driver: Component that initiates/calls another component to be tested;
+Stub: Special implementation of a component, used by the component to be tested, replaces the real deal;
+Test harness: Test environment with the stubs and drivers to execute a test.
+
+Rules of Unit Testing:
+- Write the test first (TDD);
+- Never write a test that succeeds the first time;
+- Start with something broken;
+- Don't be afraid of doing something trivial to make the test work;
+- Loose coupling and testability go hand in hand (careful with dependencies outside of a class);
+- Use mock objects;
+
+Limitations: 
+- Shows the presence of errors, not their absence;
+- Only tests the units themselves;
+- Combinatorial problem (booleans require two tests, one for true and another for false for example, impossible to test all combinations without automized generation tools);
+- Requires VCS;
+- Test case failures need to be reviewed daily;
+
+Test environment contains hardware, instrumentation, simulators and whatnot to conduct a test. Ensures repeatibility of conditions for the tests;
+
+Setup and teardown ensure not duplicating code for initialization and cleanup code for the test;
+
+TDD -> Red, green, refactor.
+
+Benefits of TDD:
+- Tests prove code works;
+- Low-level regression test suite;
+- Forces you to plan before you code (critical analysis -> understand what is the desired result);
+- Reduces cost of bugs, as they are spotted earlier;
+ 
+Architecture and design is still important, but you should not antecipate everything up front.
+
+eXtreme programming: 
+- Embraces change as requirements will not be the same as in the end;
+- Do simplest thing to work, and refactor mercilessly;
+
+XP Values:
+- Communication;
+- Simplicity;
+- Feedback;
+- Courage;
+- Respect;
