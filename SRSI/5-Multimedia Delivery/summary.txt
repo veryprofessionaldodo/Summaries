@@ -66,4 +66,46 @@ RTP Control Plane (RTCP):
 - Synchronization of different media;
 - Inform of network issues;
 - Negotiate media specific characteristics (coding, compression and whatnot)
+- Provides feedback receiver quality and means for an adaptation, flow control and adaptive media coding;
+- Uses periodic feedback to all members of an RTP session on statistics, faults, and properties;
+
+
+RTP Entities:
+- Transport Address;
+- RTP Media Type, session, multimedia session;
+- Synchronization source;
+- Contribution source;
+
+RTP Mixer: 
+- Intermediate stream receives and combines RTP packets from different sources;
+- Establishes synchronization relationship between mixed streams;
+- Resulting stream goes to a new multicast address;
+
+RTP Translator: 
+- Different participants in a multimedia session may use different data standards;
+- Intermediate system that does not change synchronization source;
+
+RTP Media Profiles:
+- How a header field is interpreted depends on the media profile;
+- Payload type identifies format and interpretation of payload; 
+
+(mais coisas aqui, mas porra estes slides são muito maus)
+
+Basically RTP is the protocol, RTCP is for the QoS.
+
+RTCP Packets, Sender and Receiver reports;
+
+RTCP performance issues arise when the amount of reports can either flood the network and consume too
+much bandwidth, or not enough of them are done, and therefore there is a low reaction capability.
+
+Session signalling:
+- Serves to manage connections, negotiate features or settings, and reserve resources;
+
+RTSP - Realtime Streaming Protocol (Multimedia Signalling protocol)
+It's a network remote control for multimedia servers.
+
+RTSP Features in the slides, christ I wanna get this over with;
+
+Interplay with RTP;
+SIP is for calls and things like that;
 
