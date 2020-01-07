@@ -3,4 +3,45 @@ Congestion control in best-effort networks:
 IP networks try to provided as many packets as possible, and higher layers handle flows;
 Queueing and scheduling do not prevent congestion, that is handled end-to-end;
 
-Dealing with congestion:
+Dealing with congestion is avoidance, detecting and reacting to it:
+- Hosts predict congestion based on RTT observation or routers actively signal expected congestion;
+
+Congestion control aims to use the available bandwidth without causing buffer overflow at the routers and distributing load;
+
+Flow control is avoiding overloading receiver, congestion is avoiding overloading network;
+
+Window size is calculated taking into consideration the congestion control window (cwindow);
+
+That window is increased or decreased according to the perceived level of congestion by the endpoint;
+
+That perception is based on packets that are not delivered (assumes they were lost due to congestion);
+
+Recall Method:
+- When a packet is successful, increase the congestion window, if not decrease it;
+- Decrease faster than increase;
+
+Inferring packet losses:
+- Retransmission timeout;
+- Duplicate Acknowledgments;
+
+Fast Retransmit / Fast Recovery:
+- Sender acknowledges packet loss as the receiver emitting repeating ACK;
+- After 3 repeated ACKS, the sender retransmits the missing packet;
+
+Slow start prevents the initial burst of packets to the network, by increasing the congestion window size with each acknowledged packet sent;
+
+Active Queue Management: 
+- Detect congestion in advance, and inform hosts to reduce send rate; 
+- Can also involve routers;
+
+DECBit:
+- Sets a bit in a header to let the host know about congestion, and then the host sends that to the sender;
+- Processing at routers needs to be simple, setting a bit is simple;
+
+Random Early Detection (RED):
+- Routers drop packets to inform the source before congestion happens;
+- Since the routers drop packets randomly, the more bandwidth the higher the chance to drop packets;
+
+Explicit Congestion Notification (ECN):
+- Similar to RED, but packet isn't dropped, only congestion bit is set. When the receiver emits an ACK, the sender behaves as if the packet was dropped;
+
