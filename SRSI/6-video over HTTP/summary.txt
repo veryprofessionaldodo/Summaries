@@ -1,0 +1,39 @@
+Video over HTTP:
+
+Streaming over HTTP has several advantages:
+- Solves middlebox problem (firewalls and things like that)
+- Can use Content Delivery Networks (CDN)
+- Well-established, simple and cheap;
+- Can use every improvement to HTTP;
+
+Disadvantages:
+- Burstiness of HTTP can trigger TCP congestion control algorithms. Solution is to to limit the upper bounds to the rate that can be emitted;
+
+DASH (framework to enable client side adaptation):
+- excellent user experience;
+- uses HTTP and CDN;
+- adapts based on network conditions;
+- can switch seamlessly;
+- supports multiple types of streaming;
+- can do client differentiation;
+
+Media Description Profile:
+- Redundant information of media streams, with codecs, language, resolution, bandwidth, you know
+- Access and timing information (start time and duration, on a live service, the instructions to start playout)
+
+DASH Data model:
+- Periods describe a part of the content with a start time and duration;
+- Adaptation set contains a media stream. A period can have multiple adaptation sets, with different properties, like different languages for the audio, for example, or even subtitles. The adaptation set is chosen by the user;
+- A representation is a stream that has the same content, but encoded in a different way. This can be a different resolution, for example. This allows the display of the best possible content for the available pixel space;
+- Adaptation subset allows the creator to restrict the combination of adaptation sets;
+
+Switching Point Alignment is done through the use os Stream Access Points, to enable seamless transitions between representations;
+
+Problem: adaptive algorithm can be too permissive of excessive throughput of competing flow;
+
+Choice of rate is conservative; 
+
+Reverse Engineering Rate Adaptation Algorithm: 
+- Use last 10 measured (video segment sizes) / (time to download);
+- Add conservative factor;
+

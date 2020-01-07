@@ -1,0 +1,6 @@
+Congestion control in best-effort networks:
+
+IP networks try to provided as many packets as possible, and higher layers handle flows;
+Queueing and scheduling do not prevent congestion, that is handled end-to-end;
+
+Dealing with congestion:

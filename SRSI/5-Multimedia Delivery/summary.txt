@@ -108,4 +108,17 @@ RTSP Features in the slides, christ I wanna get this over with;
 
 Interplay with RTP;
 SIP is for calls and things like that;
+SIP can:
+- setup a call;
+- handle the call (sustaining, transferring, terminating)
+- user location;
+- user availability and capabilities;
+
+SIP Components:
+- SIP addresses (URI);
+- SIP messages 
+- User Agent Server 
+- User Agent client (initiates session)
+- SIP Protocol (rule set for transactions between user agents);
+
 
