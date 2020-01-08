@@ -45,3 +45,6 @@ Random Early Detection (RED):
 Explicit Congestion Notification (ECN):
 - Similar to RED, but packet isn't dropped, only congestion bit is set. When the receiver emits an ACK, the sender behaves as if the packet was dropped;
 
+Quality of Service:
+
+Resource allocation allows the sharing of resources;
