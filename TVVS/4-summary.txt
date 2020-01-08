@@ -1,0 +1,47 @@
+Integration testing:
+- Testing of the integrations of components that create a sub-system;
+- Difficult to localise errors;
+- Should be done by an independent testing team;
+
+Interface types: 
+- Parameter interfaces (data passed from one to another);
+- Shared memory interfaces (shared block of memory);
+- Procedural interfaces (sub-system encapsulates set of procedures that another sub-systems calls);
+- Message passing interfaces (sub-systems request services from other sub-systems);
+
+Errors:
+- Misuse;
+- Misunderstanding (incorrectly assumes behaviour);
+- Timing;
+
+Guidelines:
+- Use extreme range of values in parameter testing;
+- Test null pointers;
+- Design test to make the component fail;
+- Stress test message passing systems;
+- Vary the order in which components are activated in shared memory systems;
+
+Big-bang testing:
+- All components are connected, harder to isolate errors;
+- Alternative is to do incremental integration testing;
+
+Incremental Integration testing:
+- Top-down (start from the higher level, use stubs for lower levels);
+- Bottom-up (integrate bottom components until everything is connected);
+- Sandwich (both of the above);
+- Collaboration (scenario based testing);
+- Thread testing (integration testing follows requirements, not hierarchy);
+- Functional Integration (combines components to get basic functionality early);
+- Neighborhood (only the nodes that connect a certain node are tested);
+- Pairwise (similar to above, but in pairs);
+
+It must follow software construction strategy.
+
+Test harness: auxiliary code to help testing;
+Test drivers: calls the code;
+Test stubs: simulate the real thing, can use mock objects;
+
+Top-down vs bottom-up:
+- Top-down can identify design flaws earlier;
+- Bottom-up can provide more demonstration earlier;
+- 

@@ -1,0 +1,53 @@
+Perception and Presence:
+
+Presence - the feeling of being in another place;
+Immersion - vivid illusion of reality;
+
+Creating Strong Presence:
+- Use multiple senses;
+- Include agents that interact with the user;
+- Have environments respond to user;
+
+What influences presence:
+- vividness;
+- vivid body;
+- internal factors;
+- interactivity;
+- sensory;
+
+Levels of Immersion:
+- Challenge-induced immersion: staying in the "flow" state, where there is a balance between challenges and abilites;
+- System and perceptual response: capability of reproducing natural perception through multisensory displays;
+- Narrative: immersion in the world and story being told;
+
+UNC Pit Room - room scale tracking, fast and accurate;
+
+We perceive reality through sensation (gathering information) and perception (interpreting information).
+
+Illusion of reality is created by generating sights, sounds, etc to fool the silly human.
+
+Physiology of Visual Perception (8 things, Eye field stereo, move time space res, visual space color):
+1. Human Eye;
+2. Field of vision;
+3. Stereoscopy;
+4. Visual Perception of movement;
+5. Temporal Resolution;
+6. Spatial Resolution;
+7. Visual Perception of space;
+8. Color Perception;
+
+The human eye (CGRA 2 DASSE)
+- Converts eletromagnetic radiation to nerve impulses;
+- High sensitivity to slight light variations;
+- Adapts to light;
+
+Field of vision:
+- Masks and goggles decrease FOV;
+- FOV of HMD is lower than EYEs;
+
+Stereoscopy:
+- Binocular vision is when both eyes can see a thing;
+- Two channels, one sensory system;
+- Allows depth perception;
+- Binocular Rivalry Efect (when the two images don't match) can cause failure to focus;
+
