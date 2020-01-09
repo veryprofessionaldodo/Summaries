@@ -1,0 +1,55 @@
+VR Technology:
+
+TECHNOLOGY MAKES THE BRAIN TICKLE HIHI
+
+Stimulates as much senses to keep brain engaged:
+- Visual (HMD or Projection for now, Cyberpunk 2077 implants in the future);
+
+HMD are glorified displays with optics. They have:
+- Lens (with FOV, Interpupillary distance, focal length, etc);
+- Display;
+- Ergonomics;
+
+FOV is the angle that we can see, can be vertical, diagonal or horizontal.
+
+HMDs can be monocular, bioccular (same thing for both eyes) or binocular.
+
+Interpupillary distance (IPD) - distance between user eyes.
+
+Eye Box can lead to reduced FOV.
+
+Lens create distortions, but also maximize FOV.
+
+Projection:
+- Room Scale projection (CAVE);
+- Dome Projection
+- Vehicle simulator;
+
+Stereo Projection:
+- Active Stereo (shutter glasses, expensive);
+- Passive Stereo (polarized images, cheaper);
+
+Simulators combine VR with vehicle;
+
+Haptic (for the feels yo):
+- Touch Feedback: texture, temperature (etc);
+- Force Feedback: weight and inertia;
+- Passive Haptics use real props (cheap, large scale, accurate, but limited and not dynamic)
+- Tactile feedback to stimulate skin tactile receptors;
+
+Audio Display:
+- Spatialization: make the sound from the right place;
+- Localization: make the people say "uuuh, sound is coming from there";
+- Properties:
+    Number of channels;
+    Masking;
+    Localization;
+    Sound stage;
+- Head Related Transfer Functions model how the sound reaches the eardrums;
+
+Tracking: 
+- Registration: position virtual objects with real/virtual objects. Maybe an example is to hold an in-game object?
+- Tracking: continuosly locate the users view/viewpoint;
+- Mechanical trackers have high accuracy, haptic feedback, but are cumbersome and expensive;
+- Magnetic Tracker use difference between magnetic transmitter and receiver;
+- Inertial Tracker use accelerometer and gyroscope;
