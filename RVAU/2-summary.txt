@@ -49,5 +49,41 @@ Stereoscopy:
 - Binocular vision is when both eyes can see a thing;
 - Two channels, one sensory system;
 - Allows depth perception;
-- Binocular Rivalry Efect (when the two images don't match) can cause failure to focus;
 
+Problems:
+- Binocular Rivalry Efect (when the two images don't match, or when you can view some things from the "outside world" on an HMD) can cause failure to focus;
+- Lateral disparity: when there is an obstruction on the object attempting to be focused by one of the eyes when another object is in direct line of sight of the other eye;
+- Binocular disparity: when different sides of an object are seen due to the natural distance between the eyes;
+- Misalignment by rotation;
+- Different zoom on each image;
+
+Perception of Movement:
+- Visual flow cues are not natural (what is straight IRL can be curved in perspective);
+- Motion Parallax (relation between objects as they move)
+
+Temporal Resolution:
+- Eye Rodes are good for low light, but take a long time to adapt to environment;
+- Eye Cones adapt faster;
+- Flicker can appear steady at a certain rate, like the wheels of a fast moving car;
+- Flicker is influenced by brightness, position on the retina, and FOV;
+
+Spatial Resolution is basically number of pixels that allow differentiation of two objects.
+
+Color Perception:
+- Hue, Saturation, Value (CGRA);
+- Response can be achromatic (light doesn't disperse into colors), monochromatic (limited range of wavelengths);
+- Varies in people;
+- Varies according to illumination;
+
+Auditory Perception:
+- Location:
+    Time differences;
+    Intensity differences;
+    Echo;
+    Accuracy varies according to how continuous sound is and head movement;
+- Frequency must be separated, and tone detection varies according to range;
+
+Touch Perception:
+- Skin;
+- Tact;
+- Kinaesthesia (ability to recognize own body);
