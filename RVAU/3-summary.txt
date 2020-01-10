@@ -53,3 +53,40 @@ Tracking:
 - Mechanical trackers have high accuracy, haptic feedback, but are cumbersome and expensive;
 - Magnetic Tracker use difference between magnetic transmitter and receiver;
 - Inertial Tracker use accelerometer and gyroscope;
+- Optical Tracker uses image processing and computer vision;
+- Inside-out tracking uses the HMD to do the tracking (WMR);
+- Outside-in tracking uses exterior sensors to know the positions of things (Vive);
+
+Input devices bring interactivity to the virtual world.
+
+Computer output (images, sounds, haptic feedback) is body input, body output (motion, voice) is the computer input.
+
+Input Device characteristics:
+- Size and shape, is it bad to hold;
+- Degrees of freedom (axis it supports);
+- Direct manipulation (like pinching to zoom on a phone, or dragging a folder to another place, requires direct manipulation and continuous update of the target) vs indirect manipulation (like pop up menus that appear without direct user control);
+- Relative input (difference between previous and current input) vs absolute input (difference to static point of reference);
+- Isometric (measure pressure or force with no actual movement) vs isotonic (measure difference from static point of reference);
+
+Hand-input devices:
+- World-grounded (joysticks, good for vehicle metaphor);
+- Non-tracked (remote controllers);
+- Tracked (Vive controllers, they are good for VR);
+- Hand-worn (gloves, good for gestures);
+- Hands :) (computer vision, required line of sight)
+
+Non-hand input device:
+- Eye tracking (shine IR light into eyes);
+- Full-body VR (wearables);
+- Walking 
+
+VR System, user gives input, VR engine provides output.
+
+Architecture:
+- Application layer is the game logic and whatnot;
+- Graphics layer is the physics, scene graph (nodes in the scene);
+- Rendering layer is the low level graphics code (OpenGL, DirectX, Vulkan), responsible with determining what color the pixels will be;
+
+There is a delay between the action and the output of said action.
+
+Can cause sickness, remove immersion, and add motion blur.
