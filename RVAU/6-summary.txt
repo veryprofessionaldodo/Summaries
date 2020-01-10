@@ -1,1 +1,23 @@
 AR superimposes reality with virtual elements (text, things like that);
+
+AR detects, tracks, and renders to the user. The user interacts, which prompts new tracking.
+
+Components:
+- Content (duh);
+- Recognition (computer vision, markers and/or features, cameras);
+- Visualization (graphics API like OpenGL and video and depth composition);
+- Interaction (UI, Gestures)
+
+Hardware:
+- Positioning (cameras);
+- Visualization (HMD, display);
+- Processing
+
+Sensors give information, but not very accurate, and very jittery.
+Vision is more accurate, requires registering local coordinate frame.
+
+Vision-based AR can be marker-based or markerless (tracks features from environment).
+
+Marker Tracking Overview:
+
+Image -> Parse Contours -> Make a rectangle -> Check against identified Markers -> undistort corners -> estimate poses.
