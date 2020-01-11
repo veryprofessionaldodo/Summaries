@@ -1,0 +1,7 @@
+AR Application:
+
+Loop:
+- Get video;
+- Estimate position and orentation of camera;
+- Render augmented scene;
+
