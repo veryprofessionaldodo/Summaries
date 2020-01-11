@@ -1,0 +1,31 @@
+Model Based Testing:
+- Tests are derived from the model of the System;
+- Uses model program that acts an oracle (authority that tells if a test passes or not);
+
+Advanatages: 
+- Better quality of product (duh);
+- Can adapt to changes;
+
+Disadvantages:
+- Requires a formal specification;
+- Test case explosion;
+
+MBT Phases:
+- Modeling:
+    Design the model;
+    Needs to be accurate;
+    Can be deterministic or not, timed or not, discrete, hybrid or continuous;
+- Test Generation:
+    Needs to choose input values and generate sequence of operation calls;
+    Careful with combinatorial explosion;
+    Constructs Control Flow Graph, and then selects a path to construct test data;
+    Or it can be random:
+    Intelligent Test Data is tests coupled with a detailed analysis of the code;
+    Generating input can be done by combination strategies (deterministic or not, instant or iterative);
+    Generating sequence of operation calls can be done with navigation through an FSM, create a state space;
+    Make sure tests are adequate by measuring accuracy, and other coverage criteria;
+    Transform abstract test cases into concrete;
+- Test Execution:
+    Results can be extracted after each run, or stored in memory to be later compared as a batch, or even it can generate tests antd then run them;
+
+Analyse manually faults detected, can be in the code or in the model (normally 50/50).
