@@ -1,0 +1,40 @@
+1-b) - Correct
+2-a) - Correct
+3-c) - Correct
+4-c) - Correct
+5-d) - Correct
+6-d) - Wrong
+7-c) - Wrong
+8-b) - Correct
+9-d) - Weird Question
+10-a) - Correct
+11-c) - Correct
+12-b) - Correct
+13-c) - Wrong
+14-c) - Wrong
+15-d) - Correct
+16-a) - Correct
+17-c) - Wrong
+18-b) - Correct
+19-b) - Correct
+20-a) - Correct
+21-d) - Correct
+22-c) - Wrong
+23-c) - Correct
+24-c) - Correct
+25-d) - Correct
+26-b) - Wrong
+27-d) - Wrong
+28-d) - Correct
+29-c) - Correct
+30-a) - Wrong
+31-c) - Wrong
+32-d) - Correct
+33-não dei
+34-d) - Wrong, mas li mal a certa
+35-b) - Wrong
+36-a) - Correct
+37-b) - Correct
+38-c) - Wrong
+39-c) - Correct
+40-a) - Correct

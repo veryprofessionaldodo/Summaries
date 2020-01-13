@@ -5,3 +5,36 @@ Loop:
 - Estimate position and orentation of camera;
 - Render augmented scene;
 
+Vision-base tracking:
+- Marker-based (with fiducials);
+- Markerless (natural feature);
+- Both of the above;
+
+Marker-based tracking is old, basically it's:
+- Callibration of real camera;
+- Get the image;
+- Detect marker;
+- Identify markers with orientation;
+- Estimation of the pose of the real camera compared to the marker;
+- Render 3D objects;
+- Join real image with created 3D render;
+
+Marker should be high contrast, asymmetric, adequate size and not too detailed;
+
+Image formation model uses pinhole, with a thin lens. Image is formed at the focal distance, everything that is not if the same image plane is blurred.
+Object scaling varies with depth (perspective projection), but it is inversed. To solve this the image is drawn in front of the optical center.
+Conversion of point in 3D space to 2D image. 
+Lens distort image, but that can be corrected.
+
+Homogeneous coordinates enable the transformation of one reference to another with a single matrix multiplication.
+Adds another dimension to the equation. This way 3D Translation is done using a multiplication of matrices, just like in rotation. 
+Rotation and translation can be done in one go, by having a matrix of type:
+[ R T ]* current position;
+[ 0 1 ]
+
+Perspective projection is done by calculating x' = (focal_distance/z_distance)*x_position;
+
+Perspective projection Matrix:
+- Transform world coordinates into camera coordinates;
+- Transform camera coordinates into sensor coordinates;
+- Transform sensor coordinates into pixel coordinates;
