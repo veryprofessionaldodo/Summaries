@@ -1,0 +1,61 @@
+Device Categories:
+- Mobile Phones;
+- Smartphones;
+- PDAs;
+- Wearables (aka privacy leeches);
+- Handhelds;
+- Tablets;
+
+Apps can:
+- Access Storage;
+- Use Internet, Bluetooth, NFC;
+- Be interacted using touch input, multitouch or gestures;
+- Access sensors such as GPS, compass, and acceleration;
+
+Can be used in enterprises, or for learning/entertainment/social interaction;
+
+Platforms: 
+- Android;
+- iOS (Apple);
+- Blackberry;
+- Symbian;
+- Chrome OS;
+- Others;
+
+Frameworks:
+- Java
+- PhoneGap, Ionic (PWAs);
+- Zámárin
+- React Native
+
+App types:
+- Web Apps: sites disguised as apps;
+- Hybrid Apps: web technologies but encapsulated to native container;
+- Native Apps: uses the OS specific framework;
+
+Has a three tier  has a presentation layer, but the screen outputs images and serves as input to the "Business Layer", which alters the data on the Data Layer.
+
+On a connected application, the app connects with the server on a wireless connection and syncs up all the data required. The server can send notifications to the client this way. 
+
+Apps can be suspended from other apps, need to know how to recover and handle gracefully this situation.
+
+Apps store locally information in several formats, including relational databases.
+ 
+Connectivity is not 100% reliable, and is used to synchronize data or other functionalities that require being online. 
+
+Mobile design patterns:
+- Interaction:
+    Save information when user leaves the screen;
+    Auto save input periodically;
+    Avoid user input especially on text;
+    User should know all actions and options available
+    Operations longer than 1s should be async
+    Credentials should be asked only once
+- Presentation:
+    No hard-coding layouts;
+    Use recommended look-and-feel of the native platform;
+    Use lists and vertical scrolling, no horizontal;
+- Behavioral:
+    Fetch data before hand, in case connectivity fails later;
+    Save state when app goes into background;
+    
