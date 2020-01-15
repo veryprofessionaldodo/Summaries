@@ -20,7 +20,7 @@ Interfaces:
     Presence - the sense of being in the environment;
     Telepresense - sensation of being elsewhere created by a set of technologies
 
-    AIP Cube:
+    AIP Cube (Zeltzer):
         - Autonomy (can react to events);
         - Interaction (self-explanatory);
         - Presence (immersion like raid shadow legends);

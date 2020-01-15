@@ -22,5 +22,32 @@ Test automation:
 - Automatic test case generation;
 - Automatic test case execution: tests are written in some executable language;
 
-Black-box:
-- 
+Equivalence class partitioning:
+- Two sets, legal and illegal inputs;
+- Each set can be split into subsets;
+
+How to:
+- Know what is supposed to happend;
+- Partition the sets into classes;
+- Know which inputs crash the test;
+- Test cases for each class;
+
+Partitioning:
+- Unidimensional considers one input variable at a time;
+- Multidimensional is to create input domains, generate a lot equivalence classes, hard to manage;
+
+Boundary value tests edge cases, should work for middle values;
+
+Cause-effect graphing links input (cause) to effect (output);
+
+Pairwise testing: all discrete combinations for two parameters;
+
+Error guessing;
+
+Risk-based testing: test based on areas with higher impact;
+
+Testing for race conditions;
+
+Random testing (good for crashes, but unpredictable); 
+
+Use a combinations of black box testing techniques.

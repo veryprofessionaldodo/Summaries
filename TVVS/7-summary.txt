@@ -1,0 +1,38 @@
+Static testing:
+
+Reviews: 
+- Cost effective
+- Prevent failures by reducing faults;
+- Better suited for finding deviations from requirements and things like that (things dynamic testing can't detect);
+- Anything written can be reviewed;
+
+Phases of review:
+- Planning;
+- Kick-off (explaining and shit);
+- Individual preparation;
+- Review Meeting (discussion about defects);
+- Rework (fix errors);
+- Follow-up (check that defects have been fixed);
+
+Deliverables are changes in review products. 
+
+Roles: 
+- Manager (decides when to do reviews and if they were useful);
+- Moderator (leads review and planninbb)
+- Author: writer or person with responsibility for the documents to be reviewed;
+- Reviewers;
+- Scribe;
+
+Can be informal or technical;
+
+Review is successful when defects found are welcome, is positive for the author and things like that.
+
+Static analysis: 
+- Run without executing the code;
+- Improves maintainability;
+- Finds defects;
+- Tool-based;
+- Finds unreachable code, unused variables and things like that.
+- Uses data flow analysis;
+
+Cyclomatic complexity is a measure of the complexity of a flow graph. 

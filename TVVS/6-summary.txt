@@ -1,0 +1,22 @@
+White-box:
+
+Adequacy of the test suite is if it satisfies a certain criterion.
+
+An element of the coverage is infeasible if it cannot be covered by any test.
+
+White-box testing is generation of test cases with knowledge of source.
+
+Coverage: 
+- Statement coverage: execute every statement of program;
+- Branch coverage: go through all the branches of decisions;
+- Decision coverage: every decision has taken all possible outcomes;
+- Condition coverage: every condition in a decision has taken all possible outcomes;
+- Modified condition/decision coverage: every condition in a decision has been shown to independently affect that decision's outcome (basically make the two variables equal, then change one of them; if the outcome varies, then it satisfies the mc/dc criteria);
+- Multiple condition coverage: test each combination of conditions (exponential blow-up);
+- Path coverage: execute every posible path, usually impossible;
+- Independent path or basis path coverage: maximal set of linearly independent paths;
+
+Data flow testing: checks the variable whenever it is referenced. Can help detect unused variables, undefined variables, undeclared, things like that.
+
+Start with black-box, go then to white-box testing.
+
