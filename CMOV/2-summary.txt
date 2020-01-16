@@ -43,7 +43,7 @@ Android Components:
 
 Application planning can follow the flow of the app.
 
-Activities are launched by calling Intents, Back button goes back to the previous Activity in the stack;
+Activities are launched by calling Intents, Back button goes back to the previous Activity in the stack (Android maintains stack of activities);
 
 Component Activation:
 - Activities and Services:

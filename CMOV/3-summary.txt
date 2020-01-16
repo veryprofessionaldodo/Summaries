@@ -1,0 +1,47 @@
+Applications usually run on a single process, and that object is always in memory.
+
+Processes have priorities depending on their states:
+- Active process (in interaction) has critical priority;
+- Visible and started service processes have high priority;
+- Background or empty processes have low priority;
+
+Android state:
+- Active: running and in interaction;
+- Paused: visible;
+- Stopped: non visible;
+- Inactive or destroyed: without an instance object;
+
+Activity lifecycle (arrows represent possible transitions): 
+- Starting -> Running -> Paused -> Running
+                                -> Destroyed
+                                -> Stopped -> Running
+                                           -> Destroyed 
+
+Starting an app:
+- Summoned with 'onCreate()';
+- Override the method to support what we want, like setting the view that we want with 'setContentView()';
+- To find the View we use 'findViewById()';
+
+Activity Navigation: 
+- Back button goes to the previous activity in the stack;
+- Defined hierarchy of parents;
+
+Resources organized in /res folder:
+- drawable: bitmaps and other graphics;
+- anim: XML animations between configurations;
+- color: colors for interface;
+- layout: Views and ViewGroups defining an interface screen;
+- menu: options and context menus; 
+- values: values :) strings, arrays, colors and whatnot;
+- xml: other XML files;
+
+ViewGroups:
+- Specify how to organize contained Views;
+- Examples are:
+    LinearLayout: Organizes in a single row or column;
+    RelativeLayout: Organizes views relative to others;
+    TableLayout: Rows and Columns similar to rows and tables in HTML;
+    FrameLayout: All descendants positioned relatively to the top left corner of the parent;
+    
+match_parent: size matches ancestor size;
+wrap_content: size matches content;
