@@ -1,0 +1,62 @@
+NFC (Near Field Communications):
+- Standard for short-range wireless communications;
+- Simple and safe 2-way interactions in close proximity (< 1cm);
+- NFC tags can contain data;
+- Card emulation with secure element;
+
+NFC Modes:
+- R/W tags;
+- P2P communication between devices;
+- Card Emulation, remote reader talks directly to a secure element applet using NFC;
+
+Core Classes:
+- NFCManager;
+- NFCAdapter;
+- Tag Technology Classes;
+- HostApduService;
+
+Hardware includes a secure element, may be the phone SIM.
+
+Messages follow NDEF (NFC Data Exchange Format), called 'NdefMessage' class in Android. 
+Constructor accepts array of 'NdefRecord' objects. Access records using 'getRecords()'.
+
+NdefRecord constructor accepts a TNF field, type, id and payload data (in byte[]). TNF field can be TNF_ABSOLUTE_URI, TNF_WELL_KNOWN or TNF_MIME_MEDIA.
+
+Requirements:
+- Hardware (duh);
+- API version 10 at least;
+- Manifest must explicitly state that it requires NFC permission;
+
+Intent Filters must be declared in the Manifest, and they can be:
+- android.nfc.action.NDEF_DISCOVERED;
+- android.nfc.action.TECH_DISCOVERED;
+- android.nfc.action.TAG_DISCOVERED;
+
+In order to write a tag, the device needs to be discovered first by sending a message first. Code below:
+
+if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(getIntent().getAction())) {
+    Tag detectedTag = getIntent().getParcelableExtra(NfcAdapter.EXTRA_TAG);
+    // PREPARE THE NDEF MESSAGE TO WRITE  ....
+    writeNdefMessageToTag(newMessage, detectedTag);
+}
+
+writeNdefMessageToTag basically gets the Ndef from the tag, connects,  writes a message with writeNdefMessage(message), and then closes the connection.
+
+Receiving NFC messages generate an intent. This will create a new activity instance matching that filter, even if an activity already exists. 
+
+To avoid creating new instances, use 'singleTop' in launchMode property in the manifest. This will call the 'onNewInstance()' method instead of creating an entire new instance.
+
+To send P2P messages, two implementations need to be defined:
+- onNdefPushComplete(): called when NFC Message is delivered;
+- createNdefMessage(): called before message is sent, to create it;
+
+Another way to create a message is to call 'setNdefPushMessage()' usually in the 'onCreate()' callback.
+
+In order to get the NfcAdapterfor the device we can go through the NfcManager;
+
+Card Emulation:
+- Card reader talks directly to an Android Service emulating a secure environment in the host;
+- Communication based on AID and APDU packets;
+- The service derives from HostApduService;
+
+Needs to set intent-filter in Manifest 'android.nfc.cardemulation.host_apdu_service'.

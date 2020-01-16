@@ -11,4 +11,20 @@ Lifecycle:
                                             -> Created
 
 Lifecycle callbacks:
-- onInflate(Activity, AttributeSet, Bundle): Called when the activity sets its content layout and a fragment is in it. AttributeSet
+- onInflate(Activity, AttributeSet, Bundle): Called when the activity sets its content layout and a fragment is in it. AttributeSet contains the attributes for the activity layout. Fragment is not yet attached to activity;
+- onAttach(Activity): Activity with fragment is attached, access it using 'getActivity()'. Set arguments with 'setArguments()' and retrieve them using 'getArguments()';
+- onCreate(Bundle): Called on parent Activity 'onCreate()';
+- onCreateView(LayoutInflater, ViewGroup, Bundle): Returns the inflated view, if no container (ViewGroup) in layout then return null.  
+- onActivityCreated(Bundle): Everything is finished here;
+- onStart() and onResume(): self-explanatory;
+- onPause(): First to be called, should stop playing sounds;
+- onDestroyView(): Fragment is being killed;
+- onDestroy(): Fragment is no longer in use, but still in memory;
+- onDetach(): Fragment does not belong to the activity, resources are freed;
+- onSaveInstanceState(Bundle): same as the other
+
+Fragment Manager:
+- Manipulates Activities and Fragments (including back stack);
+- Accessible through with 'getFragmentManager()';
+
+Dialogs don't respond to lifecycle events automatically, so use a DialogFragment.
