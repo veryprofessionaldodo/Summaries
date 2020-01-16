@@ -1,0 +1,14 @@
+Activities define full screen interface, but with a larger screen real estate (like tablets), it becomes useful to have fragments, which are basically sub-activities.
+
+Fragments:
+- Have their own layout (have a <fragment> tag);
+- Have their own lifecycle;
+- Are used inside an activity, using the same thread and context;
+- But can respond to the back button;
+
+Lifecycle:
+- Starting -> Created -> Active -> Inactive -> Destroyed
+                                            -> Created
+
+Lifecycle callbacks:
+- onInflate(Activity, AttributeSet, Bundle): Called when the activity sets its content layout and a fragment is in it. AttributeSet
