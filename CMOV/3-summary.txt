@@ -45,3 +45,53 @@ ViewGroups:
     
 match_parent: size matches ancestor size;
 wrap_content: size matches content;
+
+A style is a resource for views and activities. There are preset styles available for Android called themes.
+
+More resources:
+- Language;
+- Screen size, aspect, orientation;
+- Versions;
+- Hour: night, notnight for whatever reason;
+
+Icons should be multiple resolutions.
+
+Events and Listeners:
+- User performs action (input);
+- This action can call callback on activity or event listener on handler, that calls callback on activity;
+
+To register events there need to be listeners, that handle:
+- onClick();
+- onLongClick();
+- onFocusChange();
+- onKey();
+- onTouch();
+- onCreateContextMenu();
+
+To define a listener, the Activity needs to do 'implements onClickListener' for example, and have a function inside titled 'public void onClick(View v)'. 
+
+There can also be anonymous listeners, by setting listener to a 'new onClickListener()'.
+
+Tabs in Android are done combining TabHost, TabWidget and FrameLayout.
+
+Menus:
+- Option Menu (like the three dots on a corner);
+- Context Menu (initiated by a long tap, like replying on a Messenger conversation);
+- Are defined as a resource in /menu, and contain menu items and submenus;
+
+Dialog boxes:
+- Are prompts that show up, like "Do you want to give this app permission X? No Yes" options;
+- Name of the class is android.app.Dialog;
+- Can cahnge title using 'setTitle()', and change contentView using 'setContentView()';
+- Appears calling 'show()', and terminates using 'dismiss()';
+- Presets are AlertDialog, ProgressDialog, DatePickerDialog, TimePickerDialog
+
+Dialogs should be reused.
+
+Application preferences are stored in an .xml file. Shared Preferences are ways to store state even after shutting down application.
+
+Before shutting down, application will call 'onSaveInstanceState(Bundle)', and on restoring will call 'onRestoreInstaceState(Bundle)'. Used to handle shutting down application or switching contexts (like changing orientation).
+
+On device rotation, Android destroys and then recreates activities.
+
+Features and permissions to use need to be written in AndroidManifest.xml.
