@@ -59,3 +59,19 @@ Mobile design patterns:
     Fetch data before hand, in case connectivity fails later;
     Save state when app goes into background;
     
+There are lots of devices with different layouts, and there are several cross platform approaches:
+- Abstraction layer (generic API that calls native platform specific functions, like Xamarin or Titanium Mobile);
+- Web shell (a web app in disguise, like PhoneGap);
+
+PhoneGap apps are web apps, that have plugins for different functions (sensors, storage access, contacts, etc), that call the native OS APIs.
+
+Titanium compiles different builds to create "native" apps.
+
+Xamarin:
+- .NET APIs call Android Binding, that call Android files. It also calls the Linux Kernel;
+- Android files call Dalvik, a Java-based virtual machine that runs .apk files;
+- Dalvik connects with the Linux Kernel and vice-versa;
+
+React Native:
+- Has a Reactive Core that saves the current states, and updates the Web app or Mobile app when state changes;
+- Mobile and Web apps can trigger an action that promtps a state change in the Reactive Core;

@@ -1,0 +1,79 @@
+Android:
+- Created by Google and Open Handset Alliance in 2008
+- Based on the Linux kernel at a lower level, and on a higher level on a Java virtual machine;
+- Versions:
+    1.0, 1.1, 1.5 (cupcake), 1.6 (donut), 2.0, 2.1 (éclair), 2.2 (froyo), 2.3 (gingerbread), 3.0-2 (honeycomb) (tablets), 4.0 (ice cream sandwich), 4.1-3 (jelly beans), 4.4 (kitkat), 5.0-1 (lollipop), 6.0 (marshmallow), 7.0-1 (nougat), 8.0-1 (oreo), 9.0 (pie), 10.0 (Q) (sei lá se isto sai)
+- Supports a lot of hardware with different sensors, and different screen resolutions;
+
+Android Features:
+- Framework based in reuse and extension patterns;
+- Optimized virtual machine named Android Runtime (ART);
+- Has a browser named Blink;
+- Supports 2D and 3D Graphics from OpenGL 1.1 to 3.2;
+- Local databases use SQLite;
+- Supports standard multimedia formats;
+- Has 3G/4G, Wifi, Bluetooth and NFC;
+- Has Camera and sensors;
+- Applications are developed using Java or Kotlin;
+
+Software Architecture (aplicashõesh têm camadash, chebolash têm camadash):
+- App Layer: a camada mesmo da aplicação em si, onde o utilizador interage;
+- Application Framework Layer: o código de Java que compõe a aplicação, e faz uma gestão de mais alto nível dos serviços de Android;
+- Library Layer: o código compilado de C++ para o dispositivo, incluindo o ART;
+- Linux Kernel Layer: o sistema operativo em si, faz o management de processos, memória e aceder ao hardware como sensores;
+
+Build Process:
+- .java files are compiled into .class files;
+- .class files are compiled into .dex files to be read by the Dalvik VM or ART;
+- .dex files are converted into an .aapk, a compiled version of the source code;
+- .xml resources and other assets are compiled with the .aapk file to generate an .apk file, ready to be executed;
+
+Android Components:
+- Activities: 
+    Contain the Interface and execute a well defined task;
+    There can be many Activities, and they may reference each other;
+    One of them must be the starting Activity;
+- Services:
+    Don't have interface, are executed in the background;
+    Application can communicate with a service through an API;
+- Broadcast Receivers:
+    Applications can send 'broadcast' notifications, receivers intercept and react to them;
+- Content Providers: 
+    Allow access to data collection to other apps, with an access interface;
+
+Application planning can follow the flow of the app.
+
+Activities are launched by calling Intents, Back button goes back to the previous Activity in the stack;
+
+Component Activation:
+- Activities and Services:
+    Activities and Services are launched using an Intent;
+    An Intent can reference a specific class (explicit, M-Rated), or can specify an action, like opening contacts application (implicit);
+    Activities and services can specify intent-filters, outlining which intents they can catch;
+- Broadcast Receivers:
+    Broadcast intents contain a message to be delivered to the matching receivers;
+    Sent via 'sendBroadcast(Intent)', the message is specified inside the Intent object, and the receiver will catch it using 'onReceive(Context, Intent)'; 
+- Content Providers:
+    Must provde an 'authority' in the manifest;
+    Must have a name for its data collection;
+    Support CRUD operations;
+    Activated through a ContentResolver object, obtained with 'getContentResolver()'
+
+Intents:
+- Have a name, and can have more data with 'setData()' (URI, category, messages), or 'putExtra()' for a bundle of information (putExtra(String name, ... value));
+- A class in Android API;
+- Many predefined intents in the Android API, like Intent.ACTION_DIAL;
+- Invoked activities can return results, with 'startActivityForResult()', like asking the camera to take a picture and return it to the main application;
+
+Example code:
+@Override
+public void onActivityResult(intrequestCode, intresultCode, Intentdata) { 
+    super.onActivityResult(requestCode, resultCode, data); 
+    switch(requestCode) {
+        case (MY_CHILD_ACTIVITY) : {
+            if (resultCode == Activity.RESULT_OK)
+                StringreturnValue= data.getStringExtra("some_key");
+            break;
+        } 
+    }
+}
