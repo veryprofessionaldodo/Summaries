@@ -1,0 +1,36 @@
+Data binding:
+- In simple apps, setting variables can be done directly by defining them like usual. Can be error prone and doesn't scale;
+- Can be done using XAML, by linking control properties to data in the application. The source class is the ViewModel, and that is the only class that updates the data, others simply access it;
+
+ViewModel class (source object) has some BindableObject with a BindableProperty. This is what binds the View to the ViewModel.
+
+Bindings allow automatic update between source and target, and these transfers can be OneWay, OneWayOrAnother (jk), OneWayToSource and TwoWay.
+ 
+Para dar bind no XAML é preciso fazer algo do género 'BindingContext="{x:ReferenceName=slider}"', e para referenciar é tipo 'Opacity="{Binding Path=Value}"'.
+
+Binding constructor takes as parameters for constructor:
+- path: source property;
+- mode: see OneWayOrAnother joke above;
+- converter: object implementating IValueConverter, to 'Convert()' and 'ConvertBack()' values;
+- convPar: optional parameter for converter;
+- strFormat: if target is a string, specify format;
+- source: source object, usually a ViewModel, different from path. Can also be specified as the 'BindingContext', as mentioned above;
+
+Data binding works by making the binding property on the XAML subscribe to the 'PropertyChanged' callback on the ViewModel.
+
+ViewModels must implement INotifyPropertyChanged because of the above. Otherwise the target does not know when the values change. If the implementation uses [CallerMemberName], then the triggering of the event handler can be done inside the method.
+
+MVVM (Model-View-ViewModel) Pattern:
+- Model: class that stores persistent data and does external service calls;
+- ViewModel: class that has properties and methods that can be bound to a View;
+- View: calls that displays things and takes user input;
+
+If a View receives an input that requires data update, the ViewModel is responsible to update the Model with a 'ICommand'. When the View event is triggered, the 'Execute()' method of the ICommand object.
+
+It's possible to create an Interface for this Command thingy, and bind it to the View.
+
+ListViews support data binding, templates for each item, and data binding for each display item. The source of the collection is the 'ItemSource' property.
+
+Data binding updates whenever a new item is added or removed. 
+Pickers are not bindable.
+TableViews are bindable, and can be used for data items and other stuff.

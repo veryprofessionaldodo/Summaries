@@ -1,0 +1,11 @@
+Push notifications:
+- Could be done by polling, but inefficient and battery draining;
+- Server informs device of notification, but channel between client and server must be always open and it can change. For this, the client informs server in case of address changed and has associated channel for notifications;
+
+Basically device registers, application service notifies servers, servers deliver message to device.
+
+Cross-platform push notificatins are done by having a notification hub that sends a message to each server, that notifies respective devices.
+
+Firebase has this, in Xamarin there must be code written for each platform.
+
+TÁ FEITO
