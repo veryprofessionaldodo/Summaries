@@ -36,6 +36,7 @@ Android Components:
 - Services:
     Don't have interface, are executed in the background;
     Application can communicate with a service through an API;
+    More information in summary #8;
 - Broadcast Receivers:
     Applications can send 'broadcast' notifications, receivers intercept and react to them;
 - Content Providers: 
