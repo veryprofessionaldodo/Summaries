@@ -1,0 +1,32 @@
+Soft Keyboards:
+- Most devices don't have keyboards;
+- Soft keyboards are controlled by the input method editor;
+
+Many input types on EditText determine the keyboard (numeric, date, email...);
+
+Images are drawn to the screen using the Activity View, with the 'onDraw(Canvas)' method.
+
+Canvas defines primitives, with an instance of Paint. Geometric instances are defined using a Path (use them with 'canvas.drawPath()'). 
+
+Full custom views can be created, but need to override several methods from the View class, like the 'onMeasure()' or the 'onDraw()'.
+
+MediaPlayer class can play audio, asynchronously, and supports a lot of media formats. 
+
+VideoView encapsulates a video to be played in an activity, supports MP4, 3GP and AVC. Set video path with, well, 'setVideoPath()'. Start with the aptly named 'start()' method.
+
+Preview Camera in Activity:
+- Add SurfaceView to Activity layout;
+- Get SurfaceHolder from SurfaceView;
+- Add SurfaceHolder.callback object to SurfaceHolder;
+- In the 'surfaceChanged()' callback, 'setPreviwDisplay()' and configure camera;
+- 'startPreview()' and when stopped, 'stopPreview()' and 'release()';
+
+OpenGL:
+- Library for 3D graphics, OpenGL ES used for mobile;
+- To use OpenGL, use with 'setContentView()' a GLSurfaceView, that creates a GLRenderer;
+
+Many types of touch events, so they are abstraced into click, long click, etc.
+
+To interecept all input use with 'setOnTouchListener()' a OnTouchListener. It intercepts MotionEvent objects, with a specific action like and properties of the touch (like position);
+
+GestureDetector detects and trigger one finger gestures, whereas ScaleGestureDetector detects the pinch two finger gesture.
