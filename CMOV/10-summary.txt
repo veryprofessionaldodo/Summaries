@@ -1,0 +1,21 @@
+Iphone:
+- Appeared in 2007;
+- Muiti-touch display with gesture recognition;
+- Sensors, camera, wireless communications;
+
+iOS derives from UNIX;
+
+iOS provides the APIs for the developer to use, serving as a bridge between the hardware and software;
+
+iOS API Layer:
+- Cocoa Touch: used to handle input events, access tp sensors, camera, etc;
+- Media: everything graphics, audio and video;
+- Core Services: collections, data and time, application bundle, and other things, such as SQLite, security certificates, and XML stuff;
+- Core OS: threads, networking, files, etc.
+
+Apps use MVC (Model-View-Controller):
+- Model has objects and their state, Controller takes care of event loop, and feeds information to the View. 
+
+ViewController:
+- IBOutlet represents an object in the interface builder;
+- IBAction are handlers of events generated in interface objects;

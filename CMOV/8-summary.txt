@@ -1,24 +1,29 @@
-Broadcast receivers were mentioned in summary #2, can be declared by the <receiver> tag.
+Sensors: 
+- Location:
+    Lat and long, altitude, accuracy;
+    Obtained from GPS (accurate, but expensive) or derived from Wi-fi access points or mobile communication towers (less accurate, but less expensive);
+    Accessible through GPS_PROVIDER, NETWORK_PROVIDER or PASSIVE_PROVIDER (another app);
+    App must declare ACCESS_COURSE_LOCATION and/or ACCESS_FINE_LOCATION in the Manifest;
+- Movement (speed): TYPE_ACCELEROMETER, TYPE_GYROSCOPE;
+- Orientation: TYPE_MAGNETIC_FIELD;
+- Environment TYPE_AMBIENTE_TEMPERATURE, TYPE_LIGHT, ...PRESSURE, ...PROXIMITY, ...RELATIVE_HUMIDITY;
 
-Services, extra information:
-- If service not in memory started with 'onCreate()';
-- Any client can start service asynchronously, with 'startService()' which calls 'onStartCommand()', and terminate it with 'stopService()', which calls 'onDestroy()', or the service kills itself with 'stopSelf()'. Tragic, really;
-- Services are freed when stopped, or Android needs the memory. In this case, services can be brought to memory again;
-- Can also be created with by a connection (bind);
+Location Classes:
+- LocationListener: listens to location events, like location changing, provider being disabled or enabled...
+- LocationManager: a service for requesting locations and selecting a provider, accessible through Context.LOCATION_SERVICE. Can request updates periodically based on distance or time, but should only request them if the activity is in the foreground;
+- Locations: delivered to LocationListener, with latitude, longitude, time and provider, and more information;
 
-IntentService is a special Service subclass that creates a worker thread;
+Sensors can be physical (give actual measurements) or synthesized (process measurements to calculate another quantity).
+Synthesized sensors are TYPE_GRAVITY, ...LINEAR_ACCELERATION, ...ORIENTATION, ...ROTATION_VECTOR, ...SIGNIFICANT_MOTION.
 
-Remote call services:
-- Invoked using RPC (Remote Procedure Call);
-- Standalone in their own processes;
-- Activated (brought to memory and invoked) through 'bindService()' and freed when last client calls 'unbindService()';
-- 'onServiceConnected()' tells when a service is ready to be called, and 'onServiceDisconnected()' tells that it's not available;
+To get all sensors, use TYPE_ALL.
 
-Notifications:
-- Appear on the status bar;
-- Extended status drawer for more information;
-- Notifications are a system service, called Context.NOTIFICATION_SERVICE;
-- Access that service with a NotificationManager;
-- Customize notifications by using a Notification.Builder(), and then specifying the characteristics like icons, text, things like that;
+Sensors have a range and resolution, rate of measurement and power consumption.
 
-Alarms are another service, accessible through Context.ALARM_SERVICE, and then modifying it using a AlarmManager. Can be repeating with 'setRepeating()';
+Sensor Classes:
+- SensorManager: service accessible through Context.SENSOR_SERVICE, knows all sensors, registers SensorEventListener;
+- SensorEventLisnter or TriggerEventListener: Interfaces that respond to sensor measurements;
+- SensorEvent: a measurement;
+
+Noise Processing:
+- Some sensors produce noise, use filters (low pass, higt pass, band pass, Kalman filters).

@@ -1,0 +1,25 @@
+
+Broadcast receivers were mentioned in summary #2, can be declared by the <receiver> tag.
+
+Services, extra information:
+- If service not in memory started with 'onCreate()';
+- Any client can start service asynchronously, with 'startService()' which calls 'onStartCommand()', and terminate it with 'stopService()', which calls 'onDestroy()', or the service kills itself with 'stopSelf()'. Tragic, really;
+- Services are freed when stopped, or Android needs the memory. In this case, services can be brought to memory again;
+- Can also be created with by a connection (bind);
+
+IntentService is a special Service subclass that creates a worker thread;
+
+Remote call services:
+- Invoked using RPC (Remote Procedure Call);
+- Standalone in their own processes;
+- Activated (brought to memory and invoked) through 'bindService()' and freed when last client calls 'unbindService()';
+- 'onServiceConnected()' tells when a service is ready to be called, and 'onServiceDisconnected()' tells that it's not available;
+
+Notifications:
+- Appear on the status bar;
+- Extended status drawer for more information;
+- Notifications are a system service, called Context.NOTIFICATION_SERVICE;
+- Access that service with a NotificationManager;
+- Customize notifications by using a Notification.Builder(), and then specifying the characteristics like icons, text, things like that;
+
+Alarms are another service, accessible through Context.ALARM_SERVICE, and then modifying it using a AlarmManager. Can be repeating with 'setRepeating()';
