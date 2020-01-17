@@ -1,0 +1,22 @@
+Best performance and experience (API coverage and performance) on a native app, but worst portability across platforms.
+Best portability in a web app, but worst performance and experience. 
+Hybrid app is a wrapper that contains a "web app" and transforms it into a native app, middle ground in performance, portability and experience.
+
+Xamarin.Forms simplifies UI for all platforms, sharing the same app logic and most of the UI code.
+
+Can produce native apps to iOS and Android using Ahead Of Time and Just In Time compilation respectively.
+
+Suppots all native APIs.
+
+Uses Visual Studio and Windows (bleugh).
+
+Pages: ContentPage, MasterDetailPage, NavigationPage, TabbedPage, TemplatePage, CarousselPage.
+Layouts: StackLayout, AbsoluteLayout, RelativeLayout, GridLayout.
+
+Probably the same as in Android.
+
+Views: ActivityIndicator, BoxView, Button,DatePicker, Editor, Entry, Image, Label, ListView, Picker, ProgressBar,SearchBar, Slider, Stepper, Switch,TableView, TimePicker, WebView.
+
+Has Documentation (wow)
+
+More in-depth information about every single page in summary #12.

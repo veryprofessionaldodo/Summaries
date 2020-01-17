@@ -1,0 +1,42 @@
+More Zámárin:
+
+To configurate a VS Project, install Xamarin.Android for Android, Microsoft.NETCore.UniversalWindowsPlatform for UWP and Xamarin.Forms for everything.
+
+Xamarin.Forms interface is in common project and is used by all platforms. Each interface is composed of Pages and a singleton App.
+
+First page is the MainPage property of the App (similar to launchPage in Android Manifest);
+
+Pages:
+- Contain a Layout or View;
+- Layout can contain multiple Views or Layouts (nested);
+- Some pages (like TabbedPage or CarouselPage) can contain sub-pages;
+- Only one ContentPage;
+- If there needs to be multiple pages, the MainPage should be a NavigationPage that contains a ContentPage. The other pages to navigate are ContentPage as well.
+
+Pages:
+- TemplatedPage: allows to define ControlTemplate property, that appears in all ContentPage objects;
+- ContentPage: the page that fills the screen;
+- NavigationPage: defines navigation methods;
+- MasterDetailPage: two pages that can go back and forth;
+- TabbedPage: multi-page collection with selectable pages;
+- CarouselPage: multi-page collection with swiping to cycle pages;
+
+Layouts work just as you expect, they can contain views or other layouts inside, serve to organize how things will look.
+
+Pages can be created by code or using XAML, similar to XML. For every XAML there is a code file that handles listeners and other events.
+
+Views can do linear geometric transformations of translation, scale and rotation. These are all done achording to an Anchor, by default in the middle of the view.
+
+Modeless navigation: when you go to another page, put it on a stack and when you go back, pop the stack;
+Modal navigation: ignores stack:
+
+When switching pages, you can pass values to the constructor of the other page.
+When switching back to a parent page, if we want to pass information we need to define an interface for that transaction. We could also using the 'MessagingCenter' class.
+
+Saving and restoring data is done by accessing the Properties hash table, available from every page. Put the values to store there.
+
+Changing from Portrait to Landscape is done by defining grid properties.
+
+Device class has properties about the device, like idiom (includes DPI and whether it is for a phone, table or desktop), OS, etc.
+
+To adapt the common code to device specific code, a high level interface that maps to the target device must be implemented.
