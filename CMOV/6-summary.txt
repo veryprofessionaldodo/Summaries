@@ -1,0 +1,12 @@
+Web services use HTTP (HttpURLConnection class).
+
+Needs a separate thread and manifest permission 'android.permission.INTERNET'
+
+After API 27 only HTTPS traffic is allowed by default, use 'usesCleartextTraffic="true"' to bypass restriction.
+
+Create a new thread (implements Runnable)
+Requires Configuration, Payload and Response;
+
+The Activity is in the main thread, it communicates with another thread by attaching a handler to the thread. This handler will deal with all communications.
+
+It is possible to create an Async task class that takes care of everything.
