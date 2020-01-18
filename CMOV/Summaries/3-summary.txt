@@ -82,7 +82,7 @@ Menus:
 Dialog boxes:
 - Are prompts that show up, like "Do you want to give this app permission X? No Yes" options;
 - Name of the class is android.app.Dialog;
-- Can cahnge title using 'setTitle()', and change contentView using 'setContentView()';
+- Can change title using 'setTitle()', and change contentView using 'setContentView()';
 - Appears calling 'show()', and terminates using 'dismiss()';
 - Presets are AlertDialog, ProgressDialog, DatePickerDialog, TimePickerDialog
 
@@ -90,7 +90,7 @@ Dialogs should be reused.
 
 Application preferences are stored in an .xml file. Shared Preferences are ways to store state even after shutting down application.
 
-Before shutting down, application will call 'onSaveInstanceState(Bundle)', and on restoring will call 'onRestoreInstaceState(Bundle)'. Used to handle shutting down application or switching contexts (like changing orientation).
+Before shutting down, application will call 'onSaveInstanceState(Bundle)', and on restoring will call 'onRestoreInstanceState(Bundle)'. Used to handle shutting down application or switching contexts (like changing orientation).
 
 On device rotation, Android destroys and then recreates activities.
 
